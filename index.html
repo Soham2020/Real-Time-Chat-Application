@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samajik-Baatein 😆</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <title>Samajik Baatein 😆</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <nav>
-        <img class="logo" src="wassup.png" alt=""> 
-        <h1 class="head">Online Group Chat Portal 💑</h1>
-    </nav>
-    <div class="container">
-        <div class="message right">Sender</div>
-        <div class="message left">Reciever</div>
-    </div>
-    <div class="send">
-        <form action="#" id="send-container">
-            <input type="text" name="messageInp" id="messageInp" placeholder="Write the Message...">
-            <button class="btn" type="submit">SEND</button>
-        </form>
-    </div>
+    <section class="chat__section">
+        <img height="40" class="logo" src="/wassup.png" alt="">
+        <div class="head"><h1>Online Chat Portal 💑</h1></div>        
+        <div class="message__area"></div>
+        <div>
+            <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+        </div>
+        <div class="footer">
+            <h5>Made by Soham Das 👍</h5>
+        </div>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+
+    
 </body>
+
 </html>
