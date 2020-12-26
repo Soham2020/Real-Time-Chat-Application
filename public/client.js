@@ -2,6 +2,8 @@ const socket = io()
 let name;
 let textarea = document.querySelector('#textarea')
 let messageArea = document.querySelector('.message__area')
+// var audio = new audio('ting.mp3')
+
 do {
     name = prompt('Please enter your name: ')
 } while(!name)
@@ -38,12 +40,15 @@ function appendMessage(msg, type) {
     `
     mainDiv.innerHTML = markup
     messageArea.appendChild(mainDiv)
+    // if(type == 'incoming'){
+    //     audio.play();
+    // }
 }
-
 // Recieve messages 
 socket.on('message', (msg) => {
     appendMessage(msg, 'incoming')
     scrollToBottom()
+    // audio.play();
 })
 
 function scrollToBottom() {
